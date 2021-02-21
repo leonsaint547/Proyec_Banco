@@ -1,14 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
     </h:head>
     <h:graphicImage height="150px" width="300px" value = "https://logos-marcas.com/wp-content/uploads/2020/04/Visa-Logotipo-1976%E2%80%931992.png">
         
                                 <center><h1>  SOLICITUD TARJETA DE CREDITO </h1></center>
-                        
+                                <center>     <h:outputLink value="index.xhtml">Inicio</h:outputLink></center>
     </h:graphicImage>
          
 
@@ -23,24 +24,56 @@
                 <h:panelGrid columns="6">
                     <h:outputText value="Nombre"></h:outputText>
                     <h:inputText required="true" requiredMessage="Nombre necesario"></h:inputText>
-                  
-                    <h:outputText value="Tipo de Documento"></h:outputText>
-                    <h:inputText></h:inputText>
+
+                        <br/>
+                     <h:form>
+                         <center>Sexo</center>
+                  <h:selectManyCheckbox>
+   	          <f:selectItem itemValue="Hombre" itemLabel="Hombre" />
+   	          <f:selectItem itemValue="Mujer" itemLabel="Mujer" />
+                  </h:selectManyCheckbox>
+                    </h:form>
+                    <br/>
+                        
+                    <h:form>
+                    <center>Tipo de Documento</center>
+                    <h:selectManyCheckbox>
+   	            <f:selectItem itemValue="Cedula" itemLabel="Cedula" />
+   	            <f:selectItem itemValue="Nit" itemLabel="Nit" />
+                    <f:selectItem itemValue="Pasaporte" itemLabel="Pasaporte" />
+   	            <f:selectItem itemValue="Cedula de Extrajeria" itemLabel="Cedula de Extrajeria" />
+                    </h:selectManyCheckbox>
+                    </h:form>
+      
                     
                     <h:outputText value="Numero de Documento"></h:outputText>
                     <h:inputText></h:inputText>
 
                     <h:outputText value="Ingresos"></h:outputText>
                     <h:inputText></h:inputText>
-                    
-                    <h:outputText value="Tipo de Vivienda"></h:outputText>
-                    <h:inputText></h:inputText>
+
+                    <br/>
+                    <h:form>
+                    <center>Tipo de Vivienda
+                    <h:selectManyCheckbox>                   
+   	            <f:selectItem itemValue="Propia" itemLabel="Propia" />
+                    <f:selectItem itemValue="Familiar" itemLabel="Familiar" />
+   	            <f:selectItem itemValue="Arrendada" itemLabel="Arrendada" />
+                    </h:selectManyCheckbox> 
+                        </center>
+                    </h:form>
+
                     
                     <h:outputText value="Direccion"></h:outputText>
-                    <h:inputText></h:inputText>                    
-                      <br />                  
-                        
+                    <h:inputText></h:inputText>      
+                    
+                    <h:outputText value="Ciudad"></h:outputText>
+                    <h:inputText></h:inputText>     
+  
                 </h:panelGrid>
+                       
+                      <br />                  
+                      <br /> 
                 <h:commandButton value="Aplicar Solicitud"></h:commandButton>  </center>
             </h:form>
 
